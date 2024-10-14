@@ -11,7 +11,7 @@ st.set_page_config(
     layout="centered",
 )
 
-
+# Menu bar
 selected = option_menu(
     menu_title=None,
     options=["Introduction", "Visualizations", "Conclusion"],
@@ -20,13 +20,15 @@ selected = option_menu(
     orientation="horizontal",
 )
 
+# Introduction Section
 if selected == "Introduction":
     st.title("Sleep Health and Lifestyle")
     st.markdown("""<div style="text-align: justify;">
-        Sleep is a fundamental component of human health, affecting physical well-being, cognitive performance, and emotional stability. In recent years, the study of sleep health has gained significant attention as researchers and healthcare professionals aim to understand how sleep patterns influence overall lifestyle and well-being. The Sleep Health and Lifestyle Dataset is designed to explore the intricate relationship between individuals' sleep habits and their broader lifestyle choices, providing valuable insights for improving sleep quality and promoting healthier living. The dataset is structured to enable the analysis of correlations between sleep habits and lifestyle behaviors, allowing researchers to explore patterns, identify risk factors for poor sleep, and assess the impact of lifestyle interventions on sleep health. 
+        Sleep is a fundamental component of human health, affecting physical well-being, cognitive performance, and emotional stability. In recent years, the study of sleep health has gained significant attention as researchers and healthcare professionals aim to understand how sleep patterns influence overall lifestyle and well-being. The Sleep Health and Lifestyle Dataset is designed to explore the intricate relationship between individuals' sleep habits and their broader lifestyle choices, providing valuable insights for improving sleep quality and promoting healthier living. The dataset is from Kaggle and is structured to enable the analysis of correlations between sleep habits and lifestyle behaviors, allowing researchers to explore patterns, identify risk factors for poor sleep, and assess the impact of lifestyle interventions on sleep health. 
         <br><br>This dataset can be utilized by sleep scientists, healthcare professionals, public health policymakers, and data analysts to develop recommendations, tools, and interventions aimed at enhancing both sleep and overall well-being.
     </div>""", unsafe_allow_html=True)
 
+# Visualizaiton Section
 if selected == "Visualizations":
     sleep = pd.read_csv('Sleep_health_and_lifestyle_dataset.csv')
     with st.container():     

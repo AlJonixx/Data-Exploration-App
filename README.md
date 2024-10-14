@@ -1,4 +1,1 @@
-streamlit
-pandas
-streamlit_option_menu
-plotly
+Data Exploration App
